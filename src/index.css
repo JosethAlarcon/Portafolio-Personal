@@ -23,7 +23,7 @@ body {
 
 @layer components {
   .section-shell {
-    @apply relative py-14 sm:py-16;
+    @apply relative py-10 sm:py-12;
   }
 
   .section-title {

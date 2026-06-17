@@ -1,6 +1,7 @@
 import { Github, Linkedin, Menu, X } from 'lucide-react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useState } from 'react';
+import portrait from '../assets/profile/joseth-portrait.png';
 
 const navItems = [
   { label: 'Inicio', href: '#inicio' },
@@ -45,17 +46,36 @@ const Navbar = () => {
           whileTap={reduceMotion ? undefined : { scale: 0.98 }}
           className="relative z-10 flex items-center gap-3"
         >
-          <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-orange to-brand-sky font-bold text-brand-dark shadow-orange">
-            <span className="absolute inset-0 rounded-2xl bg-white/20 opacity-0 transition duration-300 group-hover:opacity-100" />
-            <span className="relative z-10">JA</span>
-          </div>
+<div className="group/avatar relative h-16 w-16 rounded-2xl p-[2px]">
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-orange via-brand-sky to-brand-orange opacity-80 blur-sm transition duration-300 group-hover/avatar:opacity-100" />
+
+  <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white/15 bg-slate-950 shadow-glow">
+    <img
+      src={portrait}
+      alt="Joseth Alarcón"
+      className="h-full w-full scale-[1.18] object-cover object-center transition duration-500 group-hover/avatar:scale-[1.25]"
+    />
+
+    <span className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-brand-orange/20 via-transparent to-brand-sky/20 opacity-70" />
+
+    <span className="pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover/avatar:opacity-100">
+      <span className="absolute -left-8 top-0 h-full w-8 rotate-12 bg-white/25 blur-md transition-all duration-700 group-hover/avatar:left-[120%]" />
+    </span>
+  </div>
+
+  <span className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-brand-dark text-[10px] font-bold text-brand-sky shadow-glow">
+    &lt;/&gt;
+  </span>
+
+  <span className="absolute -right-1 -top-1 h-3 w-3 rounded-full border border-brand-dark bg-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.9)]" />
+</div>
 
           <div>
             <p className="text-sm font-semibold text-brand-white">
               Joseth Alarcón
             </p>
             <p className="text-xs text-brand-slate">
-              Full Stack en formación
+              Full Stack Developer
             </p>
           </div>
         </motion.a>

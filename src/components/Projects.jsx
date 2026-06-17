@@ -5,6 +5,7 @@ import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   const reduceMotion = useReducedMotion();
+  const featuredProjects = projects.slice(0, 9);
 
   return (
     <motion.section id="proyectos" className="section-shell" {...getRevealProps(reduceMotion)}>
@@ -15,7 +16,7 @@ const Projects = () => {
             Evidencia real de como convierto ideas en productos funcionales.
           </h2>
           <p className="section-copy">
-            Estos proyectos muestran mi interes por crear soluciones completas, con foco en experiencia de usuario, arquitectura, logica de negocio y despliegue.
+            Una seleccion compacta de proyectos para mostrar stack, enfoque tecnico y resultados sin hacer tan larga la navegacion.
           </p>
         </motion.div>
         <motion.div
@@ -23,14 +24,17 @@ const Projects = () => {
           className="glass-card max-w-md p-5 transition duration-300 hover:border-brand-orange/25 hover:shadow-orange"
         >
           <p className="text-sm leading-7 text-brand-slate">
-            Mi objetivo es seguir ampliando este portafolio con proyectos que combinen valor tecnico, diseno moderno y necesidades reales de negocio.
+            Aqui priorizo proyectos representativos, visualmente mas compactos y faciles de recorrer.
           </p>
         </motion.div>
       </div>
 
-      <motion.div className="mt-12 grid gap-8" {...getStaggerProps(reduceMotion, 0.08, 0.08)}>
-        {projects.map((project) => (
-          <motion.div key={project.title} variants={fadeItem}>
+      <motion.div
+        className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3"
+        {...getStaggerProps(reduceMotion, 0.08, 0.07)}
+      >
+        {featuredProjects.map((project) => (
+          <motion.div key={project.title} variants={fadeItem} className="h-full">
             <ProjectCard project={project} />
           </motion.div>
         ))}
