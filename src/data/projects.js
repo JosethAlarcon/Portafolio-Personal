@@ -97,9 +97,9 @@ export const projects = [
     status: 'Aplicación funcional',
     accent: 'from-emerald-400/10 to-brand-sky/10',
     codeSnippet: 'budget => categories + balance + insights',
-    liveUrl: 'balance-fin-pro-team-joseth.netlify.app',
+    liveUrl: 'https://balance-fin-pro-team-joseth.netlify.app/',
     codeUrl: '#',
-    detailUrl: 'balance-fin-pro-team-joseth.netlify.app',
+    detailUrl: 'https://balance-fin-pro-team-joseth.netlify.app/',
   },
   {
     title: 'Portafolio personal',
