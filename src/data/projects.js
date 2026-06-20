@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: 'Vemuza Transportes y Mudanzas',
+    title: 'MOVEZA Transportes y Mudanzas',
     description:
       'Plataforma web para cotización y reserva de servicios de fletes y mudanzas con enfoque comercial y operativo.',
     longDescription:
@@ -16,9 +16,9 @@ export const projects = [
     status: 'Proyecto real desplegado',
     accent: 'from-brand-orange/20 to-brand-sky/10',
     codeSnippet: 'distance => quote + booking + admin',
-    liveUrl: 'https://vemuzatransportes.cl/',
+    liveUrl: 'https://moveza.netlify.app/',
     codeUrl: '#',
-    detailUrl: 'https://vemuzatransportes.cl/',
+    detailUrl: 'https://moveza.netlify.app/',
   },
     {
     title: 'Pink Pedidos',
@@ -97,9 +97,9 @@ export const projects = [
     status: 'Aplicación funcional',
     accent: 'from-emerald-400/10 to-brand-sky/10',
     codeSnippet: 'budget => categories + balance + insights',
-    liveUrl: '#',
+    liveUrl: 'balance-fin-pro-team-joseth.netlify.app',
     codeUrl: '#',
-    detailUrl: '#',
+    detailUrl: 'balance-fin-pro-team-joseth.netlify.app',
   },
   {
     title: 'Portafolio personal',
@@ -117,8 +117,8 @@ export const projects = [
     status: 'Versión actual',
     accent: 'from-brand-orange/15 to-brand-sky/15',
     codeSnippet: 'portfolio => trust + proof + contact',
-    liveUrl: '#',
+    liveUrl: 'https://portafoliorender.onrender.com',
     codeUrl: '#',
-    detailUrl: '#',
+    detailUrl: 'https://portafoliorender.onrender.com',
   },
 ];
