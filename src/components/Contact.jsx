@@ -111,8 +111,8 @@ const Contact = () => {
             </div>
 <motion.button
   type="submit"
-  initial={reduceMotion ? false : { opacity: 0, y: 16, scale: 0.96 }}
-  whileInView={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+  initial={reduceMotion ? false : { opacity: 0, scale: 0.96 }}
+  whileInView={reduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }}
   viewport={{ once: true, amount: 0.4 }}
   transition={
     reduceMotion

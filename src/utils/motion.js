@@ -7,14 +7,14 @@ export const getRevealProps = (reduceMotion, delay = 0, y = 28) => {
   if (reduceMotion) {
     return {
       initial: false,
-      whileInView: { opacity: 1, y: 0 },
+      whileInView: { opacity: 1, y: 0, scale: 1 },
       viewport,
     };
   }
 
   return {
-    initial: { opacity: 0, y },
-    whileInView: { opacity: 1, y: 0 },
+    initial: { opacity: 0, y: 0, scale: 0.985 },
+    whileInView: { opacity: 1, y: 0, scale: 1 },
     transition: {
       duration: 0.7,
       ease: [0.22, 1, 0.36, 1],
@@ -50,10 +50,11 @@ export const getStaggerProps = (reduceMotion, delayChildren = 0, staggerChildren
 };
 
 export const fadeItem = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 0, scale: 0.985 },
   show: {
     opacity: 1,
     y: 0,
+    scale: 1,
     transition: {
       duration: 0.6,
       ease: [0.22, 1, 0.36, 1],

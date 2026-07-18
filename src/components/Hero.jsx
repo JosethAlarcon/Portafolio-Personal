@@ -380,19 +380,12 @@ const Hero = () => {
 
                 <div className="min-h-[210px] px-5 py-5 font-mono text-sm leading-7 sm:text-[15px]">
                   {typedLines.map((line, index) => (
-                    <motion.div
+                    <div
                       key={`${line}-${index}`}
-                      initial={reduceMotion ? false : { opacity: 0, x: -8 }}
-                      animate={reduceMotion ? { opacity: 1 } : { opacity: 1, x: 0 }}
-                      transition={
-                        reduceMotion
-                          ? undefined
-                          : { duration: 0.28, delay: 0.18 + index * 0.04 }
-                      }
                       className="whitespace-pre-wrap text-brand-slate"
                     >
                       {tokenizeLine(line)}
-                    </motion.div>
+                    </div>
                   ))}
 
                   {!reduceMotion && typedCode.length < codeBlock.length && (

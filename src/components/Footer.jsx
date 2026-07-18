@@ -19,8 +19,8 @@ const Footer = () => {
 
   return (
     <motion.footer
-      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-      whileInView={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+      initial={reduceMotion ? false : { opacity: 0, scale: 0.985 }}
+      whileInView={reduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }}
       viewport={{ once: true, amount: 0.25 }}
       transition={
         reduceMotion
@@ -117,11 +117,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={label}
-                initial={reduceMotion ? false : { opacity: 0, y: 10, scale: 0.95 }}
+                initial={reduceMotion ? false : { opacity: 0, scale: 0.95 }}
                 whileInView={
-                  reduceMotion
-                    ? { opacity: 1 }
-                    : { opacity: 1, y: 0, scale: 1 }
+                  reduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }
                 }
                 viewport={{ once: true }}
                 transition={
