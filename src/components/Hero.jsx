@@ -229,6 +229,7 @@ const Hero = () => {
 
   <motion.a
     href="/cv-joseth-alarcon.pdf"
+    download="CV-Joseth-Alarcon.pdf"
     initial={reduceMotion ? false : { opacity: 0, y: 16, scale: 0.96 }}
     animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
     transition={
